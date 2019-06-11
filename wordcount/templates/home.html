@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+   <style>
+ 
+      @font-face { font-family: 'headline';
+                     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/headline.woff')
+                           format('woff');
+                     font-weight: normal;
+                     font-style: normal; }
+
+
+      #wrapper { width: 1000px;
+                  margin: auto; 
+                  padding: 20px;
+                  text-align: center;
+                  font-family: 'headline';
+                  color: white;}
+
+      * {background-color : black;}
+      
+   
+   </style>
+</head>
+
+
+<body>
+   <div id='wrapper'>
+
+      <h1>이곳에서 글자를 셀 수 있습니다.</h1>
+      <br>
+
+      <p>
+         <a href="{%url 'about'%}" style="font-size: 20px; color: aliceblue" ; > ABOUT WORD COUNTER </a>
+      </p>
+
+      <form actions="{%url 'result'%}">
+         <textarea cols="65" rows="35" name="fulltext"></textarea>
+         <br><br>
+
+         <input type="submit" value="count" style="color: aliceblue";> 
+      </form>
+
+   </div>
+</body>
+
+</html>
